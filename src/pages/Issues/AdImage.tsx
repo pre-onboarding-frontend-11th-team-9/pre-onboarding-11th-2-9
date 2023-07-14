@@ -12,9 +12,18 @@ const AdImage = () => {
 };
 
 const SLayout = styled.a`
-  height: 50px;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
   background-color: ${props => props.theme.colors.white[0]};
   text-align: center;
+  margin: 10px 0;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(-90deg, #2c5af0 0%, #438eff 20%, #24dfa5 100%);
+  border-image-slice: 1;
 `;
 
 export default AdImage;

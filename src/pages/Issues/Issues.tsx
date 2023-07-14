@@ -31,7 +31,6 @@ const Issues = () => {
 const SLayout = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   max-width: 800px;
   padding: 0;
   margin: 0 auto;

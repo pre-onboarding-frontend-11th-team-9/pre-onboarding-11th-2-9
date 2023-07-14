@@ -23,7 +23,9 @@ const IssueDetail = () => {
             <span>작성일: {new Date(issue?.created_at || '').toLocaleString('ko-KR')}</span>
           </SCreateInfo>
         </SInfoContainer>
-        <SComment>코멘트: {issue?.comments}</SComment>
+        <SComment>
+          <img src="/images/commentIcon.svg" alt="댓글 아이콘" /> {issue?.comments}
+        </SComment>
       </SContainer>
       <SMarkup dangerouslySetInnerHTML={issue?.markup} />
       {isLoading && <Loading />}
@@ -34,6 +36,10 @@ const IssueDetail = () => {
 const SLayout = styled.main`
   max-width: 800px;
   margin: 0 auto;
+  padding: 40px;
+  border: 1px solid ${props => props.theme.colors.gray[3]};
+  border-radius: 10px;
+  background-color: ${props => props.theme.colors.white[0]};
 `;
 
 const SContainer = styled.div`
@@ -57,13 +63,31 @@ const SCreateInfo = styled.div`
 const SAvatar = styled.img`
   width: 40px;
   height: 40px;
+  border-radius: 50%;
 `;
 
 const SComment = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
   flex-shrink: 0;
 `;
 
 const SMarkup = styled.main`
+  padding: 40px 0;
+  min-height: 400px;
+  blockquote,
+  details,
+  dl,
+  ol,
+  p,
+  pre,
+  table,
+  ul,
+  p {
+    margin-bottom: 16px;
+  }
   img {
     max-width: 100%;
   }
