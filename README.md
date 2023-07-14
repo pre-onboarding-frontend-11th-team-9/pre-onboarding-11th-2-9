@@ -10,7 +10,7 @@
 
 ## 기본 사항
 
-- 배포 링크 : [DEMO](https://pre-onboarding-11th-2-9.netlify.app/)
+- 배포 링크 : [DEMO](https://pre-onboarding-11th-3-9-pre-onboarding-11th-1-9.vercel.app/)
 - 진행 기간 : 2023.07.11. ~ 2023.07.14.
 
 ## How To Run
